@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<! ---- bootstrap getting started used for navbar and video background only --->
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+/>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"
+></script>
+
+<! ---- navbar bootstrap component content --->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Get Inspired</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"
+          >Destinations <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Travel Advice</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Deals by Country
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">United States</a>
+          <a class="dropdown-item" href="#">France</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Archive</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          >Archive</a
+        >
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
+</nav>
+
+<! --- start final project contains Christen-developed code--- >
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Migration Revelations ✈️</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #4051b4;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      h2 {
+        text-align: center;
+        color: #2e5b8e;
+        padding: 5px 10px 30px 10px;
+        font-size: 27px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      h3 {
+        text-align: center;
+        border: 1px solid #87e0fe;
+        color: #4689ff;
+        padding: 20px;
+        font-size: 22px;
+        border-radius: 4px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+        image-rendering: crisp-edges;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 13px;
+        margin: 25px 0 15px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #2e5b8e;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #4689ff;
+        color: #ade700;
+        font-size: 17px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+        font-family: monospace;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 5% auto;
+        padding: 30px 60px;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .learn-more {
+        display: block;
+        margin-top: 10px;
+        color: #79c800;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .navbar {
+        width: 100%;
+        font-family: monospace;
+        color: #4689ff;
+      }
+
+      #bgvideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <video
+      playsinline="playsinline"
+      autoplay="autoplay"
+      muted="muted"
+      loop="loop"
+      id="bgvideo"
+    >
+      <source
+        src="https://media.istockphoto.com/videos/paradise-beach-aerial-viev-video-id826171262"
+        type="video/mp4"
+      />
+    </video>
+    <div class="container">
+      <h1>
+        Migration Revelations ✈️
+        <br />
+      </h1>
+      <h2>
+        Travel without budgetary borders
+      </h2>
+      <h3>
+        How to travel around the world as a frugally responsible tourist!
+      </h3>
+      <img
+        src="https://playhardplaybook.com/wp-content/uploads/2015/01/Cheap-travel-1024x694.jpg"
+        alt="Travel without budgetary borders"
+      />
+      <p>
+        Want to travel cheaper than you live? Exploring the world doesn't have
+        to cost you a fortune, and the search for affordable destinations does
+        not have to require too much energy either! There are always places you
+        can visit on a budget no matter where you are in the world. Even the
+        countries and cities we think of as expensive can be surprisingly
+        inexpensive with price-savvy tips and tricks in your pocket - you've
+        come to the right place!
+      </p>
+      <p>
+        Find out how no destination is really ever “too expensive.” Sign up to
+        receive my latest tips and tricks for how to navigate the world on a
+        tight budget to make all of your future adventures budget-friendly and
+        always possible.
+      </p>
+      <a
+        href="https://www.onetravel.com/going-places/19-travel-tips-you-can-use-in-2019/"
+        target="_blank"
+        class="learn-more"
+      >
+        19 TIPS TO VACATION CHEAP!
+      </a>
+
+      <button class="signup-button">
+        🗺️ Stay Updated
+      </button>
+      <p class="footer">
+        This page was built by
+        <a href="https://www.github.com/" target="_blank">
+          Christen Orticari
+        </a>
+      </p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+
+        alert(
+          "Thank you, " +
+            name +
+            "! We'll be in touch by email with our latest and greatest travel tips and tricks! ☀️"
+        );
+      }
+
+      let StayUpdated = document.querySelector(".signup-button");
+      StayUpdated.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
