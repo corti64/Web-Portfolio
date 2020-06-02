@@ -151,11 +151,16 @@
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         transition: all 200ms ease-in-out;
         font-family: monospace;
+        font-weight: lighter;
+        opacity: 0.9;
       }
 
       button:hover {
         opacity: 0.8;
         cursor: pointer;
+        background: linear-gradient(0.25turn, #ade700, #f6f578, #649d66);
+        font-weight: bolder;
+        color: #4689ff;
       }
 
       .container {
@@ -167,14 +172,19 @@
 
       .learn-more {
         display: block;
-        margin-top: 10px;
+        margin-top: 8px;
         color: #79c800;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 12px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
       }
 
       .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .keyTakeaway:hover {
         text-decoration: underline;
       }
 
@@ -237,13 +247,13 @@
         alt="Travel without budgetary borders"
       />
       <p>
-        Want to travel cheaper than you live? Exploring the world doesn't have
-        to cost you a fortune, and the search for affordable destinations does
-        not have to require too much energy either! There are always places you
-        can visit on a budget no matter where you are in the world. Even the
-        countries and cities we think of as expensive can be surprisingly
-        inexpensive with price-savvy tips and tricks in your pocket - you've
-        come to the right place!
+        Want to travel <span class="keyTakeaway">cheaper than you live</span>?
+        Exploring the world doesn't have to cost you a fortune, and the search
+        for affordable destinations does not have to require too much energy
+        either! There are always places you can visit on a budget no matter
+        where you are in the world. Even the countries and cities we think of as
+        expensive can be surprisingly inexpensive with price-savvy tips and
+        tricks in your pocket - you've come to the right place!
       </p>
       <p>
         Find out how no destination is really ever “too expensive.” Sign up to
@@ -251,17 +261,25 @@
         tight budget to make all of your future adventures budget-friendly and
         always possible.
       </p>
-      <a
-        href="https://www.onetravel.com/going-places/19-travel-tips-you-can-use-in-2019/"
-        target="_blank"
-        class="learn-more"
+      <strong
+        ><em
+          ><a
+            href="https://www.onetravel.com/going-places/19-travel-tips-you-can-use-in-2019/"
+            target="_blank"
+            class="learn-more"
+          >
+            19 TIPS TO VACATION CHEAP!
+          </a></em
+        ></strong
       >
-        19 TIPS TO VACATION CHEAP!
-      </a>
-
+      <br />
       <button class="signup-button">
         🗺️ Stay Updated
       </button>
+      <br />
+      <br />
+      <hr />
+
       <p class="footer">
         This page was built by
         <a href="https://www.github.com/" target="_blank">
@@ -274,11 +292,15 @@
         let name = prompt("What is your name?");
         let email = prompt("What is your email address?");
 
-        alert(
-          "Thank you, " +
-            name +
-            "! We'll be in touch by email with our latest and greatest travel tips and tricks! ☀️"
-        );
+        if (email.includes("@")) {
+          alert(
+            "Thank you, " +
+              name +
+              ". We'll be in touch by email with our latest and greatest travel tips and tricks! 😊"
+          );
+        } else {
+          alert("Please provide a valid email address.");
+        }
       }
 
       let StayUpdated = document.querySelector(".signup-button");
