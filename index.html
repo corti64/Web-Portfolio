@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/66352f2161.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300&family=Karla:ital@0;1&family=Montserrat:wght@300;400;500&family=Nanum+Pen+Script&family=Neucha&family=Pontano+Sans&family=Shadows+Into+Light+Two&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather Away ⛅</title>
+  </head>
+  <body>
+    <div class="container border rounded">
+      <!--start search bar-->
+      <div class="search-bar">
+        <form class="form-inline" id="search-form">
+          <div class="form-group mx-sm-3 mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="search-bar"
+              placeholder="Search for a city..."
+              autocomplete="off"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary mb-2 search-button"
+            value="Search"
+            id="submit-btn"
+          >
+            Search
+          </button>
+          <a href=""
+            ><i
+              type="submit"
+              class="fas fa-search-location"
+              value="Current Location"
+              id="current-btn"
+            ></i
+          ></a>
+        </form>
+      </div>
+      <!--end search bar-->
+
+      <!--start city date and time-->
+      <div class="card" id="cityDateTime">
+        <div class="card-body" id="dateTime">
+          <h5 class="card-title" id="city">Paris, France</h5>
+          <h6 class="card-subtitle mb-2" id="currentDate"></h6>
+          <p class="card-text" id="time"></p>
+        </div>
+      </div>
+      <!--end city date and time-->
+
+      <!--start current weather summary-->
+      <div class="media" id="currentWeathersummary">
+        <img
+          src=""
+          class="align-self-center mr-3"
+          id="currentWeatherImg"
+          alt="current weather"
+          width="200"
+        />
+        <div class="media-body">
+          <h5 class="mt-0" id="currentDegrees">25</h5>
+          <p class="mb-0" id="currentWeatherDetail">
+            Mostly Sunny
+          </p>
+          <div
+            class="btn-group btn-group-toggle f-to-c-toggleButton weather-temperature"
+            data-toggle="buttons"
+          >
+            <span class="units">
+              <label class="btn btn-secondary active">
+                <input
+                  type="radio"
+                  name="options"
+                  id="celsius-link"
+                  autocomplete="off"
+                  checked
+                />
+                °C
+              </label>
+              <label class="btn btn-secondary">
+                <input
+                  type="radio"
+                  name="options"
+                  id="fahrenheit-link"
+                  autocomplete="off"
+                />
+                °F
+              </label>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--end current weather summary-->
+
+      <!--start detailed weather specs row1-->
+      <div class="current-weather-specs border-top" id="specsRow1">
+        <div class="row">
+          <div class="col-sm">
+            <p class="detailed-status-row1">
+              <strong id="highTemp">29°C</strong> <br />
+              High
+            </p>
+          </div>
+          <div class="col-sm">
+            <p class="detailed-status-row1">
+              <strong id="feelsLike">22°C</strong> <br />
+              Feels Like
+            </p>
+          </div>
+          <div class="col-sm">
+            <p class="detailed-status-row1">
+              <strong id="sunrise">05:27</strong> <br />
+              Sunrise
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!--end detailed weather specs row1-->
+
+      <!--start detailed weather specs row2-->
+      <div class="current-weather-specs border-bottom" id="specsRow2">
+        <div class="row">
+          <div class="col-sm">
+            <p class="detailed-status-row2">
+              <strong id="lowTemp">14°C</strong> <br />
+              Low
+            </p>
+          </div>
+          <div class="col-sm">
+            <p class="detailed-status-row2">
+              <strong id="humidity">30%</strong> <br />
+              Humidity
+            </p>
+          </div>
+          <div class="col-sm">
+            <p class="detailed-status-row2">
+              <strong id="sunset">20:57</strong> <br />
+              Sunset
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!--end detailed weather specs row2-->
+
+      <!--end detailed weather specs row 1 and 2-->
+
+      <!--start Today's Forecast (Forecast delivered in 3-hour chunks)-->
+      <h3 class="weather-advisory-section-header">Today's Forecast</h3>
+      <div class="row weather-forecast" id="forecast"></div>
+      <!--end Today's Forecast-->
+
+      <br />
+      <br />
+
+      <!--start 5 Day Outlook-->
+      <h3 class="weather-advisory-section-header">Five Day Outlook</h3>
+      <div class="row weather-forecast" id="dayForecast"></div>
+      <!--end 5 Day Outlook-->
+
+      <div>
+        <p class="signature">
+          Open-source code, by
+          <a href="https://github.com/corti64/my-weather-app-master"
+            >Christen Orticari</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
